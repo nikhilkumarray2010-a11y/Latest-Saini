@@ -22,7 +22,7 @@ from telegram.ext import (
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 MONGO_URI = os.getenv("MONGO_URI")
-ADMIN_ID = int(os.getenv("ADMIN_ID"))
+ADMIN_ID = 7445620075
 
 BASE_URL = "https://www.futurekul.com/admin/api"
 USER_ID = ""
