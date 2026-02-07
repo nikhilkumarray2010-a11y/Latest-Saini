@@ -194,7 +194,7 @@ async def list_users(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # ============== MAIN =======================
 
-async def main():
+def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
@@ -206,8 +206,8 @@ async def main():
     app.add_handler(CallbackQueryHandler(extract_batch, pattern="^batch_"))
 
     print("🤖 Bot running...")
-    await app.run_polling()
+    app.run_polling()
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
