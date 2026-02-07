@@ -110,6 +110,8 @@ async def batch_type(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def extract_batch(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    start_time = datetime.utcnow()
+    uid = update.effective_user.id
     uid = update.effective_user.id
     if not is_authorized(uid):
         return
